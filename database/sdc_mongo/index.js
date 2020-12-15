@@ -17,7 +17,7 @@ db.once('open', function() {
 })
 
 const productSchema = new mongoose.Schema({
-  id: Number,
+  _id: Number,
   product_name: String,
   image_one_url: String,
   image_two_url: String,
