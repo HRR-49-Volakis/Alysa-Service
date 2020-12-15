@@ -1,4 +1,5 @@
 const { connection } = require('../../database/db.js');
+const { pool } = require('../../database/sdc_postgres/index.js');
 
 function createRating(data) {
   // auto generated id, data = [user_id(1-200), rated_product(1-100), stars_given(1-5)]

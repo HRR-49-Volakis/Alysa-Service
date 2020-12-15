@@ -1,4 +1,5 @@
 const { connection } = require('../../database/db.js');
+const { pool } = require('../../database/sdc_postgres/index.js');
 
 function createProduct(data) {
   const values = [
