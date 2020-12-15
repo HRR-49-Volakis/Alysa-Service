@@ -7,4 +7,4 @@ newrelic.js
 sdc_service.pem
 login.sh
 sdc_db.pem
-login_db.sh
+login_database.sh
