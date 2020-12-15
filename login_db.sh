@@ -1,0 +1,1 @@
+ssh -i "/Users/alysashin/Desktop/SDC/alysa-service/login_db.sh" ubuntu@ec2-13-57-245-203.us-west-1.compute.amazonaws.com
