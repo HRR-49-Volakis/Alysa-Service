@@ -1,13 +1,12 @@
-# Project Name
+# Project Description
 
-> Project description
+> Scaling an existing microservice
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/HRR-49-Volakis/DW-SDC-Service
+  - https://github.com/HRR-49-Volakis/MainProduct
+  - https://github.com/HRR-49-Volakis/ReviewsService
 
 ## Table of Contents
 
@@ -17,7 +16,8 @@
 
 ## Usage
 
-> Some usage instructions
+> npm run start:dev -- to start nodemon
+> npm run build -- to start webpack
 
 ## Requirements
 
