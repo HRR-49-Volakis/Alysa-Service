@@ -17,7 +17,7 @@ db.once('open', function() {
 })
 
 const productSchema = new mongoose.Schema({
-  _id: Number,
+  id: Number,
   product_name: String,
   image_one_url: String,
   image_two_url: String,
@@ -28,11 +28,15 @@ const productSchema = new mongoose.Schema({
   collection_name: String
 })
 
+productSchema.index({ id: 1, brief_description: 1 });
+
 const ratingSchema = new mongooose.Schema({
   id: Number,
   rated_product: Number,
   stars_given: Number
 })
+
+ratingSchema.index({ id: 1 });
 
 const Product = mongoose.model('Product', productSchema);
 const Rating = mongoose.model('Rating', ratingSchema);
