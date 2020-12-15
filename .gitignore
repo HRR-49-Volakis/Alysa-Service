@@ -2,3 +2,5 @@ node_modules
 config.js
 public/bundle.js
 ikea-other-product-scroll.pem
+newrelic_agent.log
+newrelic.js
