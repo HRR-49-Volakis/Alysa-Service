@@ -1,7 +1,7 @@
 const faker = require('faker');
 const fs = require('fs');
 const mongoose = require('mongoose');
-const imagePool = require('../database/imagePool.js');
+const imagePool = require('../imagePool.js');
 
 function generateCSV (writer, func, header, encoding, callback) {
 
