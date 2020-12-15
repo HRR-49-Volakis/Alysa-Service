@@ -1,20 +1,23 @@
 const faker = require('faker');
 const fs = require('fs');
 const mongoose = require('mongoose');
-const imagePool = require('../imagePool.js');
+const imagePool = require('../database/imagePool.js');
 
 function generateCSV (writer, func, header, encoding, callback) {
 
-  var lines = 10;
+  var lines = 10000000;
   var data;
+  var id = 0;
 
   writer.write(header, encoding);
 
-  function write() {
+  function write () {
     var ok = true;
     do {
+      id++;
       lines--;
-      data = func();
+      var id_str = id.toString();
+      data = id_str + ',' + func();
       if (lines === 0) {
         writer.write(data, encoding, callback);
       } else {
@@ -25,6 +28,7 @@ function generateCSV (writer, func, header, encoding, callback) {
     if (lines > 0) {
       writer.once('drain', write);
     }
+
   }
 
   write();
