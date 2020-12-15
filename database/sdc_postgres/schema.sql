@@ -24,11 +24,11 @@ CREATE TABLE ratings (
 CREATE INDEX idx_brief_description ON products(brief_description);
 
 COPY ratings(rated_product, stars_given)
-FROM '/Users/alysashin/Desktop/SDC/other-products-scroll/sdc_postgres/ratings.csv'
+FROM '/Users/alysashin/Desktop/SDC/alysa-service/database/sdc_postgres/ratings.csv'
 DELIMITER ','
 CSV HEADER;
 
 COPY products(product_name, image_one_url, image_two_url, page_url, price, hearted, brief_description, collection_name)
-FROM '/Users/alysashin/Desktop/SDC/other-products-scroll/sdc_postgres/products.csv'
+FROM '/Users/alysashin/Desktop/SDC/alysa-service/database/sdc_postgres/products.csv'
 DELIMITER ','
 CSV HEADER;
