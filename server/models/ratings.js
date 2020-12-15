@@ -28,24 +28,47 @@ function getAll() {
   });
 }
 
+// function getCountByProduct(id) {
+//   const statement = 'SELECT count(id) as times_rated FROM ratings WHERE rated_product=?;';
+//   const values = [id];
+//   return new Promise((resolve, reject) => {
+//     connection.query(statement, values, (err, results) => {
+//       if (err) return reject(err);
+//       return resolve(results);
+//     });
+//   });
+// }
+
+// function getAvgRatingByProduct(id) {
+//   const statement = 'SELECT AVG(stars_given) as average_stars FROM ratings WHERE rated_product = ?;';
+//   const values = [id];
+//   return new Promise((resolve, reject) => {
+//     connection.query(statement, values, (err, results) => {
+//       if (err) return reject(err);
+//       return resolve(results);
+//     });
+//   });
+// }
+
+//postgres
 function getCountByProduct(id) {
-  const statement = 'SELECT count(id) as times_rated FROM ratings WHERE rated_product=?;';
+  const statement = 'SELECT rated_product as times_rated FROM ratings WHERE id=$1;';
   const values = [id];
   return new Promise((resolve, reject) => {
-    connection.query(statement, values, (err, results) => {
+    pool.query(statement, values, (err, results) => {
       if (err) return reject(err);
-      return resolve(results);
+      return resolve(results.rows);
     });
   });
 }
 
 function getAvgRatingByProduct(id) {
-  const statement = 'SELECT AVG(stars_given) as average_stars FROM ratings WHERE rated_product = ?;';
+  const statement = 'SELECT stars_given as average_stars FROM ratings WHERE id=$1;';
   const values = [id];
   return new Promise((resolve, reject) => {
-    connection.query(statement, values, (err, results) => {
+    pool.query(statement, values, (err, results) => {
       if (err) return reject(err);
-      return resolve(results);
+      return resolve(results.rows);
     });
   });
 }
