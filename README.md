@@ -37,3 +37,16 @@ npm install -g webpack
 npm install
 ```
 
+## CRUD
+
+URLs prefixed with /api/product_scroller
+
+| Action          | Method           | URL   |
+| :------------- |:----------------:|:-----|
+| Create a new product | POST | /product |
+| Retrieve similar products  | GET | /products/similar/id=:id |
+| Retrieve products in the same collection | GET | /products/collection/id=:id |
+| Retrieve number of ratings | GET | /ratings/count/product_id=:id |
+| Retrieve average rating | GET | /ratings/avg/product_id=:id |
+| Update product information  | PUT | /products/id=:id|
+| Delete a product | DELETE | /products/id=:id |
