@@ -18,6 +18,7 @@
 
 > npm run start:dev -- to start nodemon
 > npm run build -- to start webpack
+> $(npm bin)/artillery run stress-test.yml -- to run stress test script
 
 ## Requirements
 
