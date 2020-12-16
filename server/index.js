@@ -20,6 +20,10 @@ app.get('/api/product_scroller/ratings', ratingsController.getAll);
 app.get('/api/product_scroller/ratings/count/product_id=:id', ratingsController.getCountByProduct);
 app.get('/api/product_scroller/ratings/avg/product_id=:id', ratingsController.getAvgRatingByProduct);
 
+app.get('/loaderio-0c4c9d9ceb845f1b94e8a85f31300724', (req, res) => {
+  res.sendFile(path.join(__dirname, '/loaderIO.txt'));
+})
+
 app.use(express.static(publicFolder));
 
 module.exports = {
