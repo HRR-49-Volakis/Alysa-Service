@@ -16,6 +16,13 @@ app.get('/api/product_scroller/products/id=:id', productsController.getById);
 app.get('/api/product_scroller/products/similar/id=:id', productsController.getSimilarDescription);
 app.get('/api/product_scroller/products/collection/id=:id', productsController.getSimilarCollection);
 
+// post
+app.post('/api/product_scroller/product', productsController.addProduct);
+// update
+app.put('/api/product_scroller/products/id=:id', productsController.updateProduct);
+// delete
+app.delete('/api/product_scroller/products/id=:id', productsController.deleteProduct);
+
 app.get('/api/product_scroller/ratings', ratingsController.getAll);
 app.get('/api/product_scroller/ratings/count/product_id=:id', ratingsController.getCountByProduct);
 app.get('/api/product_scroller/ratings/avg/product_id=:id', ratingsController.getAvgRatingByProduct);
