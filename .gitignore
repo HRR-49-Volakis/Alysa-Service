@@ -9,3 +9,7 @@ login.sh
 sdc_db.pem
 login_database.sh
 loaderIO.txt
+load-balancer.pem
+login_load.sh
+*.pem
+login_service2.sh
