@@ -28,7 +28,8 @@ const productSchema = new mongoose.Schema({
   collection_name: String
 })
 
-productSchema.index({ id: 1, brief_description: 1 });
+productSchema.index({ id: 1});
+productSchema.index({brief_description: 1});
 
 const ratingSchema = new mongooose.Schema({
   id: Number,
