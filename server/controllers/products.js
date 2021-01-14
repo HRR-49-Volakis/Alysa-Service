@@ -27,6 +27,7 @@ function getSimilarDescription(req, res) {
     });
 }
 
+
 function getSimilarCollection(req, res) {
   productsModel.getSimilarCollection(req.params.id)
     .then((results) => res.send(results))

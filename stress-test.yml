@@ -2,35 +2,21 @@ config:
   target: "http://localhost:3001"
   phases:
     - duration: 60
-      arrivalRate: 20
+      arrivalRate: 500
   variables:
     id:
-      - "790"
-      - "170800"
-      - "25"
-      - "8750000"
-      - "990000"
+      - "9939992"
+      - "9955849"
+      - "9609594"
+      - "9750000"
+      - "9900005"
+      - "9586325"
+      - "9685324"
+      - "9999854"
 scenarios:
-  - name: "post a new product"
-    weight: 1
+  - name: "retrieve products by description and collection name"
     flow:
-      - loop:
-        - post:
-            url: "/api/product_scroller/product"
-            json:
-              product_name: "TEST product"
-              image_one_url: "TEST url"
-              image_two_url: "TEST url2"
-              page_url: "TEST page url"
-              price: 90.30
-              hearted: "f"
-              brief_description: "short description for test"
-              collection_name: "TEST TEST TEST"
-        count: 40
-  - name: "retrieve products by collection name"
-    weight: 9
-    flow:
-      - loop:
-        - get:
-            url: "/api/product_scroller/products/collection/id={{ id }}"
-        count: 40
+      - get:
+          url: "/api/product_scroller/products/similar/id={{ id }}"
+      - get:
+          url: "/api/product_scroller/products/collection/id={{ id }}"

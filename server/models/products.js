@@ -81,7 +81,10 @@ function getSimilarCollection(id) {
 
   return new Promise((resolve, reject) => {
     pool.query(queryStr, [id], (err, result) => {
-      if (err) return reject(err);
+      if (err) {
+        console.log('ERRROR++ ', err);
+        return reject(err);
+      }
       return resolve(result.rows);
       });
     });
