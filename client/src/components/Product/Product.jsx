@@ -58,7 +58,7 @@ export default class Product extends React.Component {
       hovering,
       liked,
     } = this.state;
-
+    // console.log('PRODUCT mapping ', id);
     return (
       <ProductWrapper
         onMouseOver={this.handleMouseOver}

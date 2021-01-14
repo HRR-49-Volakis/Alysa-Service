@@ -55,6 +55,7 @@ export default class ProductList extends React.Component {
       listTitle,
       StarRatings,
     } = this.props;
+    console.log('ProductList ', relatedProducts);
     return (
       <OuterListWrapper>
         <ListTitle>{listTitle}</ListTitle>

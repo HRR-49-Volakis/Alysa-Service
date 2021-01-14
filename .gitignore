@@ -13,3 +13,6 @@ load-balancer.pem
 login_load.sh
 *.pem
 login_service2.sh
+login_clone1.sh
+login
+*.sh

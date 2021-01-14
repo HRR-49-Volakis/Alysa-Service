@@ -55,6 +55,8 @@ class App extends React.Component {
 
   render() {
     const { mainProductId, relatedDescriptions, relatedCollection } = this.state;
+    console.log('relatedDescriptions ', relatedDescriptions);
+    console.log('relatedCollection ', relatedCollection);
     return (
 
       <AppWrapper>
